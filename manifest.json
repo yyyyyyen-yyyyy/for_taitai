@@ -1,0 +1,16 @@
+{
+  "name": "For Taitai",
+  "short_name": "For Taitai",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#f4f0e8",
+  "icons": [
+    {
+      "src": "photos/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

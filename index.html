@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For You ♡</title>
+
+    <!-- 不讓搜尋引擎索引 -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Web App -->
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#f4f0e8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="apple-mobile-web-app-title" content="For Taitai">
+
+    <link rel="apple-touch-icon" href="photos/icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Secret Entrance -->
+    <section id="entrance" class="entrance">
+
+        <div class="entrance-content">
+
+            <p class="entrance-small">For You ♡</p>
+
+            <h1 class="entrance-title">ひみつ。</h1>
+
+            <p class="entrance-jp">
+                このページは、あなたのためだけに。
+            </p>
+
+            <div class="entrance-line"></div>
+
+            <p class="entrance-message">
+                在打開禮物以前，<br>
+                輸入一個只有我們知道的日子。
+            </p>
+
+            <p class="entrance-hint">
+                Hint — 我們成為「我們」的那一天。
+            </p>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="secretCode"
+                    maxlength="4"
+                    inputmode="numeric"
+                    placeholder="••••"
+                    autocomplete="off"
+                >
+
+                <button id="unlockButton">
+                    打開 ♡
+                </button>
+
+            </div>
+
+            <p id="errorMessage" class="error-message">
+                好像不是這一天欸，再想一下 ♡
+            </p>
+
+        </div>
+
+    </section>
+    <!-- Wrong Password Easter Egg -->
+    <div id="piggyPopup" class="piggy-popup">
+
+        <div class="piggy-card">
+
+            <button id="closePiggy" class="piggy-close">×</button>
+
+            <img
+                src="photos/funny/piggy.jpg"
+                alt="小豬豬"
+                class="piggy-photo"
+            >
+
+            <p class="piggy-small">WAIT A MINUTE...</p>
+
+            <h2>你這個小豬豬！🐷</h2>
+
+            <p>
+                這都可以忘記？？？
+            </p>
+
+            <button id="tryAgainButton" class="try-again">
+                好啦我再想想
+            </button>
+
+        </div>
+
+    </div>
+    <main class="hero hidden">
+
+        <div class="date">2026</div>
+
+        <h1>Happy Birthday.</h1>
+
+        <p class="jp">大切なあなたへ。</p>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            給今天最重要的妳。<br><br>
+
+            今年的生日禮物，<br>
+            我想送妳一個不能放進盒子裡的東西。<br><br>
+
+            所以我把我們一路走來的回憶，<br>
+            偷偷整理在這裡了。
+        </p>
+
+        <button id="startButton">
+            打開禮物
+            <span>→</span>
+        </button>
+
+        <p class="small-text">
+            made with love ♡
+        </p>
+
+    </main>
+
+    <!-- Chapter 01 -->
+    <section id="before-us" class="chapter">
+
+        <div class="chapter-title reveal">
+            <p class="chapter-number">Chapter 01</p>
+            <h2>Before Us.</h2>
+            <p class="chapter-subtitle">在我們成為「我們」以前。</p>
+            <div class="chapter-line"></div>
+            <p class="chapter-intro">
+                好像在真正成為戀人以前，<br>
+                我們就已經有了好多好多的第一次。
+            </p>
+        </div>
+
+
+        <!-- 12/09 -->
+        <article class="memory memory-left reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/1209.jpg" alt="12月9日的回憶">
+            </div>
+
+            <div class="memory-text">
+                <p class="memory-date">2025.12.09</p>
+
+                <h3>第一次一起睡覺。</h3>
+
+                <p>
+                    好像就是從這些很普通的小事開始，<br>
+                    我們慢慢變得不太普通。
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- 12/11 -->
+        <article class="text-memory reveal">
+
+            <p class="memory-date">2025.12.11</p>
+
+            <h3>第一次把妳抓來我家按摩。</h3>
+
+            <p>
+                這一天沒有留下照片，<br>
+                但我還是記得。
+            </p>
+
+        </article>
+
+
+        <!-- 12/16 -->
+        <article class="memory memory-right reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/1216.jpg" alt="12月16日的回憶">
+            </div>
+
+            <div class="memory-text">
+
+                <p class="memory-date">2025.12.16</p>
+
+                <h3>第一次偷偷親妳。</h3>
+
+                <p>
+                    然後隔天，<br>
+                    我們還一起跑去看海。
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02/21 -->
+        <article class="memory memory-left reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/0221.jpg" alt="2月21日的回憶">
+            </div>
+
+            <div class="memory-text">
+
+                <p class="memory-date">2026.02.21</p>
+
+                <h3>第一次跟妳說出我的心意。</h3>
+
+                <p>
+                    現在回頭看，<br>
+                    好像很多事情早就已經偷偷開始了。
+                </p>
+
+            </div>
+
+        </article>
+
+                <!-- 02/25 -->
+        <article class="text-memory reveal">
+
+            <p class="memory-date">2026.02.25</p>
+
+            <h3>第一次去妳的新竹小家搬家。</h3>
+
+            <p>
+                沒有留下照片的一天，<br>
+                但也是我開始慢慢走進妳生活裡的一天。
+            </p>
+
+        </article>
+
+
+        <!-- 02/28 -->
+        <article class="memory memory-right reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/0228.jpg" alt="2月28日的回憶">
+            </div>
+
+            <div class="memory-text">
+
+                <p class="memory-date">2026.02.28</p>
+
+                <h3>第一次帶妳去宜蘭看急診。</h3>
+
+                <p>
+                    雖然怎麼想都不是一個很浪漫的行程，<br>
+                    但聽說，這天好像是妳喜歡上我的契機。
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03/07 -->
+        <article class="memory memory-left reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/0307.jpg" alt="3月7日的回憶">
+            </div>
+
+            <div class="memory-text">
+
+                <p class="memory-date">2026.03.07</p>
+
+                <h3>第一次一起煮麵吃！</h3>
+
+                <p>
+                    好像沒有什麼特別的大事，<br>
+                    就只是一起煮了一碗麵。<br>
+                    但現在回頭看，這種普通的小日子也很喜歡。
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03/23 -->
+        <article class="memory memory-right reveal">
+
+            <div class="memory-photo">
+                <img src="photos/before_us/0323.jpg" alt="3月23日的回憶">
+            </div>
+
+            <div class="memory-text">
+
+                <p class="memory-date">2026.03.23</p>
+
+                <h3>第一次被朋友問起我們的關係。</h3>
+
+                <p>
+                    「所以你們兩個現在到底是什麼關係？」<br><br>
+                    好像大家都看出來了，<br>
+                    只有我們還沒有正式說出口。
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03/27 - 03/28 -->
+        <article class="trip-memory reveal">
+
+            <div class="trip-heading">
+
+                <p class="memory-date">2026.03.27 — 03.28</p>
+
+                <h3>第一次單獨出遠門。</h3>
+
+                <p>
+                    我們一起出發去接阿寶寶。<br>
+                    結果一路上又多了好多奇怪的小回憶。
+                </p>
+
+            </div>
+
+
+            <div class="trip-gallery">
+
+                <figure class="trip-photo trip-photo-1">
+                    <img src="photos/before_us/0327-1.jpg" alt="一起去看薩摩耶">
+                    <figcaption>途中跑去看薩摩耶。</figcaption>
+                </figure>
+
+                <figure class="trip-photo trip-photo-2">
+                    <img src="photos/before_us/0327-2.jpg" alt="早餐店的回憶">
+                    <figcaption>在早餐店中暑，妳幫我拿著冰袋。</figcaption>
+                </figure>
+
+                <figure class="trip-photo trip-photo-3">
+                    <img src="photos/before_us/0328.jpg" alt="接到阿寶">
+                    <figcaption>然後，我們終於接到阿寶了！</figcaption>
+                </figure>
+
+            </div>
+
+        </article>
+
+
+        <!-- Before Us Ending -->
+        <div class="before-ending reveal">
+
+            <p class="ending-small">And then...</p>
+
+            <p class="ending-text">
+                回頭看才發現，<br>
+                在我們真正成為「我們」以前，<br>
+                好像早就已經一起經歷了好多事情。
+            </p>
+
+            <div class="ending-line"></div>
+
+            <p class="ending-text">
+                到這裡，<br>
+                好像只差一個人把那句話說出來了。
+            </p>
+
+            <p class="ending-date">2026.04.02</p>
+
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f0e8;
+    color: #3f3a36;
+    font-family: "Noto Serif TC", serif;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 25px;
+
+    opacity: 0;
+    animation: fadeIn 1.8s ease forwards;
+}
+
+.date {
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+
+    margin-bottom: 25px;
+
+    color: #8c837b;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 8vw, 80px);
+
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 12px;
+}
+
+.jp {
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    color: #8f8780;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+
+    background: #aaa19a;
+
+    margin: 40px 0;
+}
+
+.message {
+    font-size: 15px;
+    line-height: 2;
+
+    letter-spacing: 1.5px;
+
+    color: #57504b;
+
+    margin-bottom: 45px;
+}
+
+button {
+    border: 1px solid #746b64;
+
+    background: transparent;
+
+    color: #453f3a;
+
+    padding: 14px 30px;
+
+    font-family: "Noto Serif TC", serif;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+}
+
+button span {
+    margin-left: 15px;
+
+    transition: margin-left 0.3s ease;
+}
+
+button:hover {
+    background: #453f3a;
+    color: #f4f0e8;
+}
+
+button:hover span {
+    margin-left: 25px;
+}
+
+.small-text {
+    position: absolute;
+
+    bottom: 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #aaa19a;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+/* =========================
+   CHAPTER 01 — BEFORE US
+========================= */
+
+.chapter {
+    display: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 30px 180px;
+}
+
+.chapter.show {
+    display: block;
+}
+
+.chapter-title {
+    text-align: center;
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chapter-number {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #9b9188;
+    margin-bottom: 20px;
+}
+
+.chapter-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 8vw, 85px);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.chapter-subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #837a73;
+}
+
+.chapter-line {
+    width: 35px;
+    height: 1px;
+    background: #aaa19a;
+    margin: 40px 0;
+}
+
+.chapter-intro {
+    font-size: 14px;
+    line-height: 2.2;
+    letter-spacing: 2px;
+    color: #716963;
+}
+
+
+/* MEMORY */
+
+.memory {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    margin: 80px 0;
+}
+
+.memory-right {
+    flex-direction: row-reverse;
+}
+
+.memory-photo {
+    width: 50%;
+}
+
+.memory-photo img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+
+    display: block;
+
+    box-shadow: 0 15px 40px rgba(60, 50, 40, 0.08);
+}
+
+.memory-text {
+    width: 50%;
+}
+
+.memory-date {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #9a9189;
+
+    margin-bottom: 18px;
+}
+
+.memory-text h3,
+.text-memory h3 {
+    font-weight: 400;
+
+    font-size: 23px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.memory-text p,
+.text-memory p {
+    font-size: 14px;
+
+    line-height: 2.2;
+
+    letter-spacing: 1.5px;
+
+    color: #716963;
+}
+
+
+/* 沒有照片的回憶 */
+
+.text-memory {
+    min-height: 65vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* Scroll animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 手機 */
+
+@media (max-width: 700px) {
+
+    .chapter {
+        padding: 80px 22px 120px;
+    }
+
+    .memory,
+    .memory-right {
+        flex-direction: column;
+
+        gap: 35px;
+
+        min-height: auto;
+
+        margin: 140px 0;
+    }
+
+    .memory-photo,
+    .memory-text {
+        width: 100%;
+    }
+
+    .memory-photo img {
+        max-height: 520px;
+    }
+
+    .memory-text {
+        text-align: center;
+    }
+
+}
+/* =========================
+   03/27 — 03/28 PHOTO DIARY
+========================= */
+
+.trip-memory {
+    padding: 120px 0 180px;
+}
+
+.trip-heading {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.trip-heading h3 {
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.trip-heading > p:last-child {
+    font-size: 14px;
+    line-height: 2.2;
+    letter-spacing: 1.5px;
+    color: #716963;
+}
+
+.trip-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    align-items: start;
+}
+
+.trip-photo {
+    margin: 0;
+}
+
+.trip-photo:nth-child(2) {
+    margin-top: 80px;
+}
+
+.trip-photo:nth-child(3) {
+    margin-top: 25px;
+}
+
+.trip-photo img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+
+    box-shadow: 0 15px 40px rgba(60, 50, 40, 0.08);
+}
+
+.trip-photo figcaption {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+
+    color: #8b8179;
+}
+
+
+/* =========================
+   BEFORE US ENDING
+========================= */
+
+.before-ending {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px;
+}
+
+.ending-small {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+
+    font-size: 20px;
+
+    color: #9a9189;
+
+    margin-bottom: 60px;
+}
+
+.ending-text {
+    font-size: 15px;
+
+    line-height: 2.4;
+    letter-spacing: 2px;
+
+    color: #625b55;
+}
+
+.ending-line {
+    width: 1px;
+    height: 80px;
+
+    background: #bbb2aa;
+
+    margin: 55px 0;
+}
+
+.ending-date {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    letter-spacing: 6px;
+
+    margin-top: 100px;
+
+    color: #453f3a;
+}
+
+
+/* 手機版 */
+
+@media (max-width: 700px) {
+
+    .trip-memory {
+        padding: 80px 0 120px;
+    }
+
+    .trip-gallery {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .trip-photo:nth-child(2),
+    .trip-photo:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .trip-photo img {
+        height: auto;
+        max-height: 550px;
+    }
+
+    .ending-date {
+        letter-spacing: 3px;
+    }
+
+}
+/* =========================
+   SECRET ENTRANCE
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+.entrance {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background: #f4f0e8;
+}
+
+.entrance-content {
+    width: 100%;
+    max-width: 520px;
+
+    animation: fadeIn 1.8s ease forwards;
+}
+
+.entrance-small {
+    font-family: "Playfair Display", serif;
+
+    font-size: 12px;
+    letter-spacing: 5px;
+
+    color: #9a9189;
+
+    margin-bottom: 30px;
+}
+
+.entrance-title {
+    font-family: "Playfair Display", "Noto Serif TC", serif;
+
+    font-size: clamp(48px, 8vw, 75px);
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.entrance-jp {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #8f8780;
+}
+
+.entrance-line {
+    width: 35px;
+    height: 1px;
+
+    background: #aaa19a;
+
+    margin: 40px auto;
+}
+
+.entrance-message {
+    font-size: 15px;
+
+    line-height: 2.1;
+    letter-spacing: 2px;
+
+    color: #57504b;
+}
+
+.entrance-hint {
+    margin-top: 30px;
+
+    font-family: "Playfair Display", "Noto Serif TC", serif;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+
+    color: #9a9189;
+}
+
+.password-box {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 22px;
+}
+
+#secretCode {
+    width: 180px;
+
+    border: none;
+    border-bottom: 1px solid #8d837b;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 12px;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    letter-spacing: 12px;
+
+    color: #453f3a;
+}
+
+#secretCode::placeholder {
+    color: #bbb2aa;
+}
+
+#unlockButton {
+    min-width: 150px;
+}
+
+.error-message {
+    margin-top: 25px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    color: #a07e78;
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+.error-message.show {
+    opacity: 1;
+}
+/* =========================
+   PIGGY EASTER EGG
+========================= */
+
+.piggy-popup {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: rgba(50, 45, 40, 0.55);
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+.piggy-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.piggy-card {
+    position: relative;
+
+    width: min(400px, 90vw);
+
+    padding: 25px 25px 35px;
+
+    background: #f4f0e8;
+
+    text-align: center;
+
+    transform: scale(0.85) rotate(-2deg);
+
+    transition: transform 0.4s ease;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+}
+
+.piggy-popup.show .piggy-card {
+    transform: scale(1) rotate(0deg);
+}
+
+.piggy-photo {
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    margin-bottom: 25px;
+}
+
+.piggy-small {
+    font-family: "Playfair Display", serif;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #9a9189;
+
+    margin-bottom: 12px;
+}
+
+.piggy-card h2 {
+    font-size: 24px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.piggy-card > p {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    color: #716963;
+}
+
+.piggy-close {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    padding: 0;
+
+    border: none;
+
+    background: rgba(244, 240, 232, 0.85);
+
+    font-size: 20px;
+
+    z-index: 2;
+}
+
+.try-again {
+    margin-top: 25px;
+}
