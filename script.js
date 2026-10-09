@@ -445,3 +445,23 @@ updateMusicButton();
 
 // 網站開啟時立即嘗試播放
 startBackgroundMusic();
+
+/* =========================
+   MUTE ALL VIDEOS
+========================= */
+
+document.querySelectorAll("video").forEach(video => {
+
+    // 所有影片強制靜音
+    video.muted = true;
+    video.defaultMuted = true;
+
+    // 即使使用者嘗試取消靜音，也會重新靜音
+    video.addEventListener("volumechange", () => {
+        if (!video.muted || video.volume !== 0) {
+            video.muted = true;
+            video.volume = 0;
+        }
+    });
+
+});
