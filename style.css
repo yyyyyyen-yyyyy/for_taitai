@@ -746,3 +746,201 @@ button:hover span {
 .try-again {
     margin-top: 25px;
 }
+/* =========================
+   CHAPTER 02
+========================= */
+
+.chapter-two {
+    padding-top: 100px;
+}
+
+
+/* Love Letter */
+
+.love-letter-section {
+    padding: 100px 0 180px;
+}
+
+.love-letter-heading {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.love-letter-heading h3 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.love-letter-heading > p:last-child {
+    font-size: 14px;
+    line-height: 2.2;
+    color: #716963;
+}
+
+.letter-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.letter-photo {
+    width: min(100%, 620px);
+    margin: 0;
+}
+
+.letter-photo:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.letter-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.12);
+}
+
+
+/* Confession */
+
+.confession-memory {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.confession-small {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #9a9189;
+    margin-bottom: 35px;
+}
+
+.confession-memory h3 {
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.confession-pause {
+    font-size: 14px;
+    color: #8f8780;
+    margin: 45px 0;
+}
+
+.confession-highlight {
+    color: #625b55;
+}
+
+.confession-final {
+    font-size: clamp(30px, 5vw, 48px);
+    letter-spacing: 4px;
+    margin: 25px 0 45px;
+}
+
+.confession-description {
+    font-size: 14px;
+    line-height: 2.5;
+    letter-spacing: 1px;
+    color: #716963;
+}
+
+
+/* Officially Together */
+
+.together-memory {
+    min-height: 100vh;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.together-memory h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(27px, 4vw, 46px);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 70px;
+}
+
+.together-photo {
+    width: min(100%, 650px);
+    margin: 0 auto 70px;
+}
+
+.together-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 750px;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+.together-message {
+    font-size: 16px;
+    line-height: 2.6;
+    letter-spacing: 2px;
+}
+
+
+/* Chapter Ending */
+
+.chapter-two-ending {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.chapter-two-ending > p:not(.ending-small) {
+    font-size: 15px;
+    line-height: 2.5;
+    letter-spacing: 2px;
+}
+
+.chapter-two-next {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: #9a9189;
+}
+
+
+/* iPad / Mobile */
+
+@media (max-width: 700px) {
+
+    .love-letter-section {
+        padding: 60px 0 100px;
+    }
+
+    .letter-gallery {
+        gap: 60px;
+    }
+
+    .confession-memory {
+        padding: 100px 10px;
+    }
+
+    .together-memory {
+        padding: 80px 0;
+    }
+
+    .together-memory h3 {
+        margin-bottom: 45px;
+    }
+
+}

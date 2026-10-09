@@ -1,6 +1,7 @@
 const startButton = document.getElementById("startButton");
 const hero = document.querySelector(".hero");
 const chapter = document.getElementById("before-us");
+const chapterTwo = document.getElementById("the-day-we-became-us");
 const entrance = document.getElementById("entrance");
 const secretCode = document.getElementById("secretCode");
 const unlockButton = document.getElementById("unlockButton");
@@ -81,7 +82,8 @@ startButton.addEventListener("click", () => {
         hero.style.display = "none";
 
         chapter.classList.add("show");
-
+        chapterTwo.classList.add("show");
+        
         window.scrollTo(0, 0);
 
         setTimeout(() => {
