@@ -944,3 +944,618 @@ button:hover span {
     }
 
 }
+/* Chapter Transition Button */
+
+.next-chapter-button {
+    margin-top: 65px;
+    padding: 16px 35px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    border: 1px solid #8c837b;
+    background: transparent;
+    color: #453f3a;
+}
+
+.next-chapter-button:hover {
+    background: #453f3a;
+    color: #f4f0e8;
+}
+/* =========================
+   BACK TO PREVIOUS CHAPTER
+========================= */
+
+.back-chapter-button {
+    display: block;
+    margin: 0 0 30px;
+    padding: 12px 18px;
+
+    border: none;
+    background: transparent;
+
+    font-family: "Noto Serif TC", serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: #8c837b;
+
+    transition: color 0.3s ease;
+}
+
+.back-chapter-button:hover {
+    background: transparent;
+    color: #453f3a;
+}
+
+@media (max-width: 700px) {
+    .back-chapter-button {
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+}
+/* =========================
+   CHAPTER 03 — OUR LITTLE MOMENTS
+========================= */
+
+.chapter-three {
+    padding-top: 100px;
+}
+
+/* 影片區塊 */
+
+.chapter-video-block {
+    width: min(100%, 700px);
+    margin: 0 auto 150px;
+    text-align: center;
+}
+
+.chapter-video-block video {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    display: block;
+
+    background: #e9e3db;
+
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+.video-caption {
+    margin-top: 20px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 2px;
+
+    color: #9a9189;
+}
+
+/* 手機版 */
+
+@media (max-width: 700px) {
+
+    .chapter-three {
+        padding-top: 70px;
+    }
+
+    .chapter-video-block {
+        margin-bottom: 100px;
+    }
+
+    .chapter-video-block video {
+        max-height: 500px;
+    }
+
+}
+/* =========================
+   CHAPTER 03 — MAY MEMORIES
+========================= */
+
+/* 05/12–15 — Care */
+
+.care-memory {
+    min-height: 100vh;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.care-small {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-style: italic;
+    color: #9a9189;
+    margin-bottom: 35px;
+}
+
+.care-memory h3 {
+    font-size: clamp(23px, 4vw, 34px);
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 65px;
+}
+
+.care-photo {
+    width: min(100%, 480px);
+    margin: 0 auto 70px;
+}
+
+.care-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+.care-message {
+    font-size: 15px;
+    line-height: 2.7;
+    letter-spacing: 1.5px;
+    color: #625b55;
+}
+
+
+/* 05/20 — Flowers */
+
+.flower-memory {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.flower-memory h3 {
+    font-size: clamp(28px, 5vw, 45px);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.flower-intro {
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: #8c837b;
+    margin-bottom: 90px;
+}
+
+.flower-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto 90px;
+}
+
+.flower-photo {
+    margin: 0;
+}
+
+.flower-photo:nth-child(2) {
+    margin-top: 90px;
+}
+
+.flower-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 580px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+.flower-message {
+    font-size: 15px;
+    line-height: 2.6;
+    letter-spacing: 1.5px;
+    color: #625b55;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .care-memory {
+        padding: 100px 0;
+    }
+
+    .flower-memory {
+        padding: 100px 0;
+    }
+
+    .flower-gallery {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+
+    .flower-photo:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .flower-photo img {
+        max-height: 550px;
+    }
+
+}
+
+/* =========================
+   05/22 — GRADUATION PERFORMANCE
+========================= */
+
+.milestone-memory {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.milestone-heading h3 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.milestone-heading > p:last-child {
+    font-size: 15px;
+    line-height: 2.5;
+    letter-spacing: 1.5px;
+    color: #716963;
+    margin-bottom: 85px;
+}
+
+.milestone-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    align-items: center;
+}
+
+.milestone-gallery figure {
+    margin: 0;
+}
+
+.milestone-gallery figure:nth-child(2) {
+    margin-top: 80px;
+}
+
+.milestone-gallery img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+.milestone-caption {
+    margin-top: 55px;
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #9a9189;
+}
+
+
+/* =========================
+   06/13 — GRADUATION
+========================= */
+
+.graduation-memory {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.graduation-memory h3 {
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.graduation-intro,
+.graduation-ending {
+    font-size: 15px;
+    line-height: 2.6;
+    letter-spacing: 1.5px;
+    color: #716963;
+}
+
+.graduation-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 90px auto;
+}
+
+.graduation-photo {
+    margin: 0;
+}
+
+.graduation-photo:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.graduation-photo:nth-child(2) {
+    transform: rotate(2deg);
+    margin-top: 60px;
+}
+
+.graduation-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.12);
+}
+
+
+/* =========================
+   07/08–13 — TRAVEL DIARY
+========================= */
+
+.travel-memory {
+    padding: 120px 0 160px;
+}
+
+.travel-opening {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 60px 15px 100px;
+}
+
+.travel-label {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #9a9189;
+    margin-bottom: 25px;
+}
+
+.travel-opening h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(35px, 6vw, 65px);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+.travel-opening > p:last-child {
+    font-size: 15px;
+    line-height: 2.5;
+    letter-spacing: 1.5px;
+    color: #716963;
+}
+
+/* 底片相簿 */
+
+.travel-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 45px;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.travel-photo {
+    margin: 0;
+    padding: 14px 14px 22px;
+    background: #fffdf9;
+    box-shadow: 0 15px 45px rgba(60, 50, 40, 0.09);
+}
+
+.travel-photo:nth-child(even) {
+    margin-top: 75px;
+}
+
+.travel-photo img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+}
+
+.travel-photo figcaption {
+    margin-top: 18px;
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #8c837b;
+    text-align: center;
+}
+
+/* 旅行影片 */
+
+.travel-video {
+    width: min(100%, 750px);
+    margin: 180px auto 0;
+    text-align: center;
+}
+
+.travel-video-title {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.travel-video video {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    display: block;
+    background: #e9e3db;
+    box-shadow: 0 20px 60px rgba(60, 50, 40, 0.1);
+}
+
+/* 旅行結尾 */
+
+.travel-ending {
+    padding: 180px 20px 100px;
+    text-align: center;
+}
+
+.travel-ending > p:first-child {
+    font-size: 15px;
+    line-height: 2.6;
+    letter-spacing: 1.5px;
+    color: #625b55;
+}
+
+.travel-ending-en {
+    margin-top: 50px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #9a9189;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .milestone-memory,
+    .graduation-memory {
+        padding: 100px 0;
+    }
+
+    .milestone-gallery,
+    .graduation-gallery {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .milestone-gallery figure:nth-child(2),
+    .graduation-photo:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .graduation-gallery {
+        margin: 65px auto;
+    }
+
+    .travel-memory {
+    padding: 30px 0 120px;
+    }
+
+    .travel-gallery {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .travel-photo:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .travel-photo img {
+        height: auto;
+        max-height: 550px;
+    }
+
+    .travel-video {
+        margin-top: 110px;
+    }
+
+    .travel-ending {
+        padding: 120px 10px 60px;
+    }
+
+}
+/* =========================
+   SECRET NEXT CHAPTER BUTTON
+========================= */
+
+.chapter {
+    position: relative;
+}
+
+.secret-next-button {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+
+    z-index: 10;
+
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+
+    font-family: "Noto Serif TC", serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    color: #b4aaa1;
+    opacity: 0.55;
+
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.secret-next-button:hover {
+    opacity: 1;
+    color: #453f3a;
+    background: transparent;
+}
+
+@media (max-width: 700px) {
+    .travel-memory {
+        padding: 20px 0 80px;
+    }
+
+    .travel-opening {
+        padding: 50px 10px 80px;
+    }
+}
+/* =========================
+   CHAPTER 03 ENDING
+========================= */
+
+.chapter-three-ending {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.chapter-three-ending h3 {
+    font-family: "Playfair Display", "Noto Serif TC", serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.chapter-three-ending > p:not(.ending-small) {
+    font-size: 15px;
+    line-height: 2.5;
+    letter-spacing: 1.5px;
+    color: #716963;
+}
+
+.chapter-three-ending .next-chapter-button {
+    margin-top: 65px;
+}
+/* =========================
+   FIX CHAPTER 04 TOP SPACING
+========================= */
+
+.chapter-four {
+    padding-top: 30px !important;
+}
+
+.chapter-four .travel-memory {
+    padding-top: 0 !important;
+}
+
+.chapter-four .travel-opening {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 20px 15px 80px !important;
+    margin-top: 0 !important;
+    justify-content: flex-start !important;
+}
