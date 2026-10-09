@@ -1731,3 +1731,73 @@ button:hover span {
     letter-spacing: 2px;
     color: #9a9189;
 }
+
+/* =========================
+   REAL WASHI PAPER BACKGROUND
+========================= */
+
+html,
+body {
+    background-color: #f4f0e8;
+}
+
+
+body {
+    background-image:
+        linear-gradient(
+            rgba(244, 240, 232, 0.10),
+            rgba(244, 240, 232, 0.10)
+        ),
+        url("backgrounds/washi-paper.png");
+
+    background-repeat: repeat;
+    background-size: auto, 825px auto;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+
+/* 讓所有章節透出紙張背景 */
+
+.chapter,
+#entrance,
+.hero {
+    background-color: transparent;
+    background-image: none;
+}
+
+/* =========================
+   PAPER BACKGROUND TEXT CONTRAST
+========================= */
+
+/* 主要文字 */
+body {
+    color: #38332f;
+}
+
+/* 各章節標題 */
+.chapter h1,
+.chapter h2,
+.chapter h3,
+.hero h1,
+.hero h2 {
+    color: #342f2b;
+}
+
+/* 日期、回憶描述 */
+.memory-date,
+.firsts-description,
+.chapter-intro,
+.chapter-subtitle,
+.travel-opening p,
+.firsts-caption {
+    color: #625951;
+}
+
+/* 小標籤、英文裝飾文字 */
+.chapter-number,
+.ending-small,
+.travel-label,
+.final-signature {
+    color: #786b60;
+}
