@@ -45,7 +45,7 @@
             <div class="entrance-line"></div>
 
             <p class="entrance-message">
-                近來這個可愛網站以前<br>
+                進來這個可愛網站以前<br>
                 跟我說只有我們兩個知道的日子!
             </p>
 
@@ -1224,6 +1224,26 @@
 
 
     </section>
+    
+    <!-- =========================
+        BACKGROUND MUSIC
+    ========================= -->
+
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="music/from-the-start.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        id="musicToggle"
+        class="music-toggle"
+        type="button"
+        aria-label="播放背景音樂"
+        aria-pressed="false"
+        title="播放或暫停背景音樂"
+    >
+        <span id="musicIcon">♫</span>
+        <span id="musicText">Music Off</span>
+    </button>
 
     <script src="script.js"></script>
 

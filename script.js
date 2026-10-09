@@ -343,3 +343,105 @@ backChapterFiveButton.addEventListener("click", () => {
 
     window.scrollTo(0, 0);
 });
+
+
+/* =========================
+   BACKGROUND MUSIC CONTROLLER
+========================= */
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+const musicIcon = document.getElementById("musicIcon");
+const musicText = document.getElementById("musicText");
+
+// 預設音量 50%
+backgroundMusic.volume = 0.5;
+
+// 使用者是否手動控制過音樂
+let musicManuallyControlled = false;
+
+// 音樂按鈕狀態
+function updateMusicButton() {
+    const playing = !backgroundMusic.paused;
+
+    musicToggle.classList.toggle("playing", playing);
+
+    musicIcon.textContent = playing ? "♫" : "♪";
+    musicText.textContent = playing ? "Music On" : "Music Off";
+
+    musicToggle.setAttribute("aria-pressed", String(playing));
+    musicToggle.setAttribute(
+        "aria-label",
+        playing ? "暫停背景音樂" : "播放背景音樂"
+    );
+}
+
+// 開始播放音樂
+async function startBackgroundMusic() {
+    if (musicManuallyControlled) return;
+
+    try {
+        await backgroundMusic.play();
+    } catch (error) {
+        console.log("瀏覽器暫時阻擋自動播放：", error);
+    }
+
+    updateMusicButton();
+}
+
+// 手動音樂開關
+musicToggle.addEventListener("click", async () => {
+    musicManuallyControlled = true;
+
+    if (backgroundMusic.paused) {
+        try {
+            await backgroundMusic.play();
+        } catch (error) {
+            console.log("無法播放音樂：", error);
+        }
+    } else {
+        backgroundMusic.pause();
+    }
+
+    updateMusicButton();
+});
+
+// 第一次操作網站時嘗試播放
+function startMusicOnFirstInteraction(event) {
+    // 不干擾音樂按鈕本身
+    if (musicToggle.contains(event.target)) return;
+
+    if (!musicManuallyControlled && backgroundMusic.paused) {
+        startBackgroundMusic();
+    }
+
+    document.removeEventListener(
+        "pointerdown",
+        startMusicOnFirstInteraction
+    );
+
+    document.removeEventListener(
+        "keydown",
+        startMusicOnFirstInteraction
+    );
+}
+
+document.addEventListener(
+    "pointerdown",
+    startMusicOnFirstInteraction
+);
+
+document.addEventListener(
+    "keydown",
+    startMusicOnFirstInteraction
+);
+
+// 監聽音樂狀態
+backgroundMusic.addEventListener("play", updateMusicButton);
+backgroundMusic.addEventListener("pause", updateMusicButton);
+
+// 初始化按鈕
+updateMusicButton();
+
+// 網站開啟時立即嘗試播放
+startBackgroundMusic();

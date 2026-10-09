@@ -1801,3 +1801,62 @@ body {
 .final-signature {
     color: #786b60;
 }
+
+/* =========================
+   BACKGROUND MUSIC BUTTON
+========================= */
+
+.music-toggle {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    background: rgba(250, 247, 240, 0.9);
+    border: 1px solid rgba(100, 85, 70, 0.25);
+    border-radius: 30px;
+
+    color: #625951;
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(60, 50, 40, 0.08);
+    backdrop-filter: blur(8px);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.music-toggle:hover {
+    background: #fffaf3;
+    transform: translateY(-2px);
+}
+
+.music-toggle.playing {
+    color: #3f3a36;
+}
+
+#musicIcon {
+    font-size: 19px;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    .music-toggle {
+        right: 16px;
+        bottom: 18px;
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+}
+
