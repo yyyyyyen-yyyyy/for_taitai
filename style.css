@@ -1860,3 +1860,28 @@ body {
     }
 }
 
+/* =========================
+   MEMORY TEXT FONT SIZE
+========================= */
+
+.chapter-intro,
+.firsts-description,
+.travel-opening p:not(.memory-date):not(.travel-label),
+.chapter-five-ending > p:not(.ending-small):not(.final-signature),
+.memory-description {
+    font-size: 17px;
+    line-height: 2.3;
+    letter-spacing: 1px;
+}
+
+/* 手機版稍微縮小 */
+@media (max-width: 600px) {
+    .chapter-intro,
+    .firsts-description,
+    .travel-opening p:not(.memory-date):not(.travel-label),
+    .chapter-five-ending > p:not(.ending-small):not(.final-signature),
+    .memory-description {
+        font-size: 16px;
+    }
+}
+
