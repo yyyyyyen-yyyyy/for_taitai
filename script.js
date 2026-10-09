@@ -4,6 +4,7 @@ const chapter = document.getElementById("before-us");
 const chapterTwo = document.getElementById("the-day-we-became-us");
 const chapterThree = document.getElementById("our-little-moments");
 const chapterFour = document.getElementById("our-seoul-diary");
+const chapterFive = document.getElementById("more-firsts");
 const entrance = document.getElementById("entrance");
 const secretCode = document.getElementById("secretCode");
 const unlockButton = document.getElementById("unlockButton");
@@ -299,4 +300,46 @@ backChapterFourButton.addEventListener("click", () => {
 
     window.scrollTo(0, 0);
 
+});
+
+/* =========================
+   CHAPTER 04 ↔ CHAPTER 05
+========================= */
+
+const nextChapterFiveButton =
+    document.getElementById("nextChapterFiveButton");
+
+const backChapterFiveButton =
+    document.getElementById("backChapterFiveButton");
+
+// Chapter 04 → Chapter 05
+nextChapterFiveButton.addEventListener("click", () => {
+
+    // 暫停韓國旅行影片
+    chapterFour.querySelectorAll("video").forEach(video => {
+        video.pause();
+    });
+
+    chapterFour.classList.remove("show");
+    chapterFive.classList.add("show");
+
+    window.scrollTo(0, 0);
+
+    setTimeout(() => {
+        observeElements();
+    }, 100);
+});
+
+// Chapter 05 → Chapter 04
+backChapterFiveButton.addEventListener("click", () => {
+
+    // 暫停攀岩影片
+    chapterFive.querySelectorAll("video").forEach(video => {
+        video.pause();
+    });
+
+    chapterFive.classList.remove("show");
+    chapterFour.classList.add("show");
+
+    window.scrollTo(0, 0);
 });
